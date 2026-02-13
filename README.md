@@ -22,7 +22,7 @@ A real-time bookmark manager built with Next.js, Supabase, and Tailwind CSS. Fea
 
 Before you begin, you'll need:
 
-1. A [Supabase](https://supabase.com) account (free tier works)
+1. A [Supabase](https://supabase.com) account 
 2. A [Google Cloud Console](https://console.cloud.google.com) project for OAuth
 3. A [Vercel](https://vercel.com) account for deployment
 
@@ -213,4 +213,36 @@ smart-bookmark-app/
 ```
 ## Live
 
--This project is live at https://smart-bookmark-irdc.vercel.app do check it out
+-This project is live at https://smart-bookmark-irdc.vercel.app do check it out !!
+
+##  Challenges & Key Learnings
+
+During development, I encountered several real-world challenges that strengthened my full-stack skills:
+
+- **Google OAuth Integration:**  
+  Faced redirect URI mismatches and authentication errors. Resolved by properly configuring OAuth credentials in Google Cloud Console and Supabase, ensuring exact URL matching for both development and production.
+
+- **Row Level Security (RLS):**  
+  Initial data access issues were caused by restrictive RLS policies. Solved by implementing precise policies using `auth.uid()` and thoroughly testing queries in the SQL editor.
+
+- **Real-Time Synchronization:**  
+  Live updates were not triggering across tabs due to missing replication and improper subscription handling. Fixed by enabling Supabase replication and implementing proper React `useEffect` cleanup for subscriptions.
+
+- **Next.js App Router Architecture:**  
+  Encountered client/server component conflicts. Addressed by clearly separating Client Components (`"use client"`) and organizing Supabase logic in a dedicated utility file.
+
+- **Production Deployment Issues:**  
+  The app worked locally but failed in production due to missing environment variables. Resolved by correctly configuring Vercel environment variables and redeploying.
+
+---
+
+###  What This Project Demonstrates
+
+- Secure authentication with OAuth
+- Database security using Row Level Security (RLS)
+- Real-time data synchronization
+- Modern Next.js 14 App Router architecture
+- Full-stack debugging and production deployment
+
+This project reflects my ability to build secure, real-time, production-ready applications while effectively solving practical development challenges.
+
