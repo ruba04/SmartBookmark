@@ -211,3 +211,6 @@ smart-bookmark-app/
 ├── tailwind.config.js        # Tailwind configuration
 └── tsconfig.json             # TypeScript configuration
 ```
+## Live
+
+-This project is live at https://smart-bookmark-irdc.vercel.app do check it out
